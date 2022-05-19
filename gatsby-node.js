@@ -280,6 +280,14 @@ exports.createSchemaCustomization = async ({ actions }) => {
       footer: LayoutFooter
     }
 
+    interface HackathonPage implements Node {
+      id: ID!
+      title: String
+      description: String
+      image: HomepageImage
+      content: [HomepageBlock]
+    }
+
     interface AboutPage implements Node {
       id: ID!
       title: String
@@ -562,6 +570,14 @@ exports.createSchemaCustomization = async ({ actions }) => {
     }
 
     type ContentfulAboutPage implements Node & AboutPage @dontInfer {
+      id: ID!
+      title: String
+      description: String
+      image: HomepageImage @link(from: "image___NODE")
+      content: [HomepageBlock] @link(from: "content___NODE")
+    }
+
+    type ContentfulHackathonPage implements Node & HackathonPage @dontInfer {
       id: ID!
       title: String
       description: String

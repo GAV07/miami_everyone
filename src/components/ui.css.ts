@@ -163,6 +163,12 @@ export const paddingY = styleVariants(theme.space, (padding) => ({
   paddingTop: padding,
   paddingBottom: padding,
 }))
+
+export const paddingX = styleVariants(theme.space, (padding) => ({
+  paddingRight: padding,
+  paddingLeft: padding,
+}))
+
 export const marginY = styleVariants(theme.space, (margin) => ({
   marginTop: margin,
   marginBottom: margin,
