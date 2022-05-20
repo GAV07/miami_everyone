@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Container, Section, Text, SuperHeading } from "./ui"
+import { Container, Section, Text, SuperHeading, Kicker } from "./ui"
 import * as styles from "./about-hero.css"
 
 export default function AboutHero(props) {
@@ -9,6 +9,7 @@ export default function AboutHero(props) {
     <Section>
       <Container>
         <SuperHeading className={styles.aboutHeroHeader}>
+          {props.kicker && <Kicker>{props.kicker}</Kicker>}
           {props.heading}
         </SuperHeading>
         {props.text && (

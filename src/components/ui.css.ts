@@ -486,7 +486,7 @@ export const buttons: Record<ButtonVariants, string> = styleVariants({
   primary: [
     button,
     {
-      color: theme.colors.background,
+      color: theme.colors.text,
       backgroundColor: theme.colors.muted,
       ":hover": {
         backgroundColor: theme.colors.active,
@@ -502,7 +502,7 @@ export const buttons: Record<ButtonVariants, string> = styleVariants({
       color: theme.colors.primary,
       backgroundColor: theme.colors.background,
       ":hover": {
-        color: theme.colors.background,
+        color: theme.colors.primary,
         backgroundColor: theme.colors.active,
       },
       ":focus": {
@@ -514,10 +514,11 @@ export const buttons: Record<ButtonVariants, string> = styleVariants({
   link: [
     button,
     {
-      color: "inherit",
+      color: theme.colors.primary,
       backgroundColor: "transparent",
       ":hover": {
-        backgroundColor: theme.colors.muted,
+        color: theme.colors.background,
+        backgroundColor: theme.colors.primary,
       },
       ":focus": {
         backgroundColor: theme.colors.muted,
