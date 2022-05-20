@@ -6,7 +6,7 @@ import Feature from "./feature"
 export default function FeatureList(props) {
   return (
     <Container width="fullbleed">
-      <Box background="muted" radius="large">
+      <Box background="primary" radius="large">
         <Box center paddingX={6} paddingY={5}>
           <Heading>
             {props.kicker && <Kicker>{props.kicker}</Kicker>}
