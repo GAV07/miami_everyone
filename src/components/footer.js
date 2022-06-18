@@ -46,12 +46,7 @@ const socialMedia = {
     url: "https://github.com",
     name: "GitHub",
     icon: <GitHub />,
-  },
-  TWITCH: {
-    url: "https://twitch.tv",
-    name: "Twitch",
-    icon: <Twitch />,
-  },
+  }
 }
 
 const getSocialURL = ({ service, username }) => {
